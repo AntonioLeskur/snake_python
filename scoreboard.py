@@ -12,6 +12,7 @@ class Scoreboard(Turtle):
         self.hideturtle()
         self.score = 0
         with open(r"venv/data_score.txt") as data:
+            print(data)
             self.high_score = int(data.read())
 
 
