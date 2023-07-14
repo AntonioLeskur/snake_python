@@ -11,7 +11,7 @@ class Scoreboard(Turtle):
         self.goto(0, 260)
         self.hideturtle()
         self.score = 0
-        with open(r"venv/data_score.txt") as data:
+        with open(r"data_score.txt") as data:
             print(data)
             self.high_score = int(data.read())
 
@@ -24,7 +24,7 @@ class Scoreboard(Turtle):
     def reset(self):
         if self.score > self.high_score:
             self.high_score = self.score
-            with open(r"venv/data_score.txt", mode="w") as data:
+            with open(r"data_score.txt", mode="w") as data:
                 data.write(f"{self.score}")
         self.score = 0
 
